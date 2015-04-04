@@ -1,0 +1,295 @@
+\documentclass[10pt]{article}
+\usepackage{array, xcolor, lipsum, bibentry, hyperref}
+\usepackage[margin=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[xindy]{glossaries}
+\usepackage{ifpdf}
+\usepackage{multicol}
+
+\let\endtitlepage\relax
+
+\ifpdf
+\pdfinfo {
+	/Author (David Silva)
+	/Title (David Silva's Curriculum Vitae)
+	/Subject (Curriculum Vitae)
+	/Keywords (David Silva CV)
+	/CreationDate (\date)
+}
+\fi 
+
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
+\newcolumntype{R}{p{0.8\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+
+\title{David Silva's Curriculum Vitae}
+\author{David Silva}
+
+% ----------------- %
+% SETUP THE LISTING %
+% ----------------- %
+\newenvironment{listing}{
+ \begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}} 
+\newenvironment{enum}{
+ \begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+% ------------ %
+%   GLOSSARY   %
+% ------------ %
+\newglossaryentry{crm}{
+ name=ClinidataCRM,
+ description={\url{http://www.maxdata.pt/index.php?option=com_k2&view=item&layout=item&id=27&Itemid=99&lang=en}}
+}
+% ------------ %
+%   ACRONYMS   %
+% ------------ %
+\newacronym{gwt}{GWT}{\emph{Google Web Toolkit}}
+\newacronym{gxt}{GXT}{\emph{Ext-GWT}}
+
+\makeglossaries
+% ------------ %
+% BEGIN THE CV %
+% ------------ %
+\begin{document}
+\pagestyle{fancy}
+	
+% ------ %
+% Header %
+% ------ %
+\begin{minipage}[ht]{0.46\textwidth}
+	\vspace{-5mm}\Huge{\textbf{David Silva}}
+\end{minipage}
+% -------- %
+% Contacts %
+% -------- %
+\begin{minipage}[ht]{0.46\textwidth}
+\hfill +351 965304746
+
+\hfill \href{mailto:david@davidafsilva.pt}{david@davidafsilva.pt}
+
+\hfill \url{http://davidafsilva.pt}
+\end{minipage}
+
+% ------- %
+%  Quote  %
+% ------- %
+\begin{minipage}[ht]{0.925\textwidth}
+\vspace{-3mm} Odivelas, Lisboa, Portugal \\\\
+\vspace{0 mm} \hfill \footnotesize{
+\textit{"Try not to become a man of success but a man of value."} - Albert Einstein
+}
+\line(1,0){411}
+\vspace{0.5mm}
+\end{minipage}
+
+% -------- %
+% /header  %
+% -------- %
+\line(1,0){411}
+\vspace{2em}
+
+%%%%%%%%%%%%
+% ABOUT ME %
+%%%%%%%%%%%%
+\section*{About}
+	I'm a passionate software developer, which has over time gained more and more of an interest for security. 
+I'm both curiosity and challenge driven, as well as a honest and calm type of a person.\\
+Having a high motivation and learning capacity, i can easily adapt and overcome adverse situations. Nevertheless, i certainly enjoy working in a healthy and inovative work invornement.\\\\
+My areas of expertise are the following, by order of revelance/interest:
+\begin{listing}
+	\item Software Development/Architecture
+	 	\begin{listing}
+			\item Back-end business logic
+			\item MVP web front-end
+		\end{listing}
+	\item Software Security
+	\item Fault-Tolerante Distributed Systems
+\end{listing}
+
+\section*{Professional Experience}
+\begin{tabular}{L!{\VRule}R}
+	Jan 2013 \\ $\rightarrow$ present &{\bf Software Engineer, Nokia Siemens Networks / Coriant, Portugal}\\
+		&
+		I'm Currently developing software for the Optical Networks area, focused on Routing and Wavelength Assignment (\emph{RWA}) algorithms.\newline
+		\\
+		Technologies 
+		& 
+		The front-end (client layer) is being developed with \emph{Eclipse RCP} and \emph{SWT} (Desktop), \gls{gwt} (Web).\newline
+		The back-end (business/data layer) is being developed with \emph{Java}, \emph{Ecore/EMF}, \emph{jBoss}, \emph{OSGI}, etc\\\\
+
+	Jul 2012 \\ $\rightarrow$ Dec 2012 &{\bf Researcher \& Developer, Maxdata Informática, Portugal}\\
+	&
+	Developed a major and innovative IT solution to cover the entire health institution. Packing funcionality, security and rich visual components.\\
+
+	Technologies 
+	& 
+	The front-end (client layer) was developed with \gls{gwt}.\newline
+	The back-end (business/data layer) features \emph{Java}, \emph{Spring}, \emph{Hibernate}, \emph{Apache CFX}, \emph{JavaCC - JJTree} and many others.\newline
+	We also used \emph{Mirth Connect} for several purposes, such as system/applications integration, quality control, etc.
+\end{tabular}
+
+\section*{}
+\begin{tabular}{L!{\VRule}R}
+	Sep 2011\\$\rightarrow$ Jun 2012 &{\bf Trainee, Maxdata Informática, Portugal}\\
+	&
+	Developed an IT solution for Epidemiologic Surveillance, which will be a key factor in both prevention and infection control. This topic was also the target of my 	MSc thesis.\newline
+	Also, i've done a security audit targeting the software \gls{crm}.\\
+	
+	Technologies 
+	& 
+	The front-end (client layer) was developed with \gls{gwt}.\newline
+	The back-end (business/data layer) featured \emph{Java}, \emph{Spring}, \emph{Hibernate}, \emph{Apache CFX}.\newline
+	I also used \emph{Mirth Connect} to implement a middleware between the application and third-party applications.
+\end{tabular}
+
+\section*{Education}
+\begin{tabular}{L!{\VRule}R}
+2010 $\rightarrow$ 2012 & MSc in Computer Science - Computer Systems, Architecture and Networks, Faculty of Sciences of the University of Lisbon, Portugal.\vspace{5pt}\\
+2005 $\rightarrow$ 2010 & BSc in Computer Science, Faculty of Sciences of the University of Lisbon, Portugal.
+\end{tabular}
+
+\subsubsection*{Free Courses}
+\begin{tabular}{L!{\VRule}R}
+Dec/2013 $\rightarrow$ Feb/2014 & Creative, Serious and Playful Science of Android Apps, University of Illinois at Urbana-Champaign.\vspace{5pt}\\
+Jun/2013 $\rightarrow$ Aug/2013 & Malicious Software and its Underground Economy: Two Sides to Every Story, University of London.\vspace{5pt}\\
+Apr/2013 $\rightarrow$ Jul/2013 & Introduction to Data Science, University of Washington.\vspace{5pt}\\
+Mar/2013 $\rightarrow$ Jun/2013 & An Introduction to Interactive Programming in Python, Rice University.\vspace{5pt}\\
+Jan/2013 $\rightarrow$ Mar/2013 & Crytography I, Stanford University.\vspace{5pt}\\
+Jan/2013 $\rightarrow$ Mar/2013 & Building an Information Risk Management Toolkit, University of Washington.\vspace{5pt}\\
+Jan/2013 $\rightarrow$ Mar/2013 & Information Security and Risk Management in Context, University of Washington.\vspace{5pt}\\
+\end{tabular}
+
+\section*{Personal projects}
+\begin{tabular}{L!{\VRule}R}
+{\bf adblock}
+	&
+	Adblock is a command-line tool to interact with MVPS hosts file. Enabling an easy way to update your hosts file and keep your machine/pc a ittle bit safer/away from ad-driven networks.\\
+	P. Languages
+	&
+	\emph{Python}\\
+	URL
+	&
+	\url{https://github.com/davidafsilva/adblock}\\\\
+{\bf jVirusTotal}
+	&
+	A simple, yet powerful java API, as well as a tool to scan files/folders live via the VirusTotal.com service.\newline
+	{\bf *Currently under development*}\\
+	P. Languages
+	&
+	\emph{Java}\\
+	Frameworks
+	&
+	\emph{jUnit}, \emph{commons-validator}.\\
+	URL
+	&
+	\url{https://github.com/davidafsilva/jVirusTotal} - currently unavailable\\\\
+{\bf Pipocas.tv Tool}
+	&
+	This project allows to search and automatically download subtitles from the pipocas.tv subtitle web site.\\
+	P. Languages
+	&
+	\emph{Python}\\
+	Libraries
+	&
+	\emph{BeautifulSoup}.\\
+	URL
+	&
+	\url{https://github.com/davidafsilva/pipocas.tv-scraper}\\\\
+{\bf Ticket-Restaurant Tool}
+	&
+	This project aims to provide a simple CLI tool to view the balance and last movements of a Ticket Restaurant Account.\\
+	P. Languages
+	&
+	\emph{Python}\\
+	Libraries
+	&
+	\emph{BeautifulSoup}.\\
+	URL
+	&
+	\url{https://github.com/davidafsilva/ticket-restaurant-tool}\\\\
+{\bf Business Manager}
+	&
+	Business Manager is a tailor-made tool for easily managing clients, products and sales. It features a sale history, custom sale report generation as well as a automatic report sender (via e-mail).\\
+	P. Languages
+	&
+	\emph{Java}\\
+	Frameworks
+	&
+	\emph{Swing}, \emph{H2}, \emph{Spring}, \emph{IcePDF}, \emph{iText}, \emph{jGoodies-forms}, \emph{microba}, \emph{log4j}.\\
+	URL
+	&
+	\url{https://github.com/davidafsilva/business-manager}\\\\
+\end{tabular}
+
+\section*{Technologies}
+My main programming language is \emph{Java}, i've been programming in \emph{Java} since college (2005). Other than that, i can sort my knowledge of different languages as follows:
+\begin{multicols}{3}
+\begin{enum}
+	\item PHP: Great
+	\item JavaScript: Great
+	\item HTML: Great
+	\item C: Good
+	\item C\#: Good
+	\item Python: Good
+	\item SQL: Good
+	\item Shell scripting: Good
+	\item Haskell: Basic
+\end{enum}
+\end{multicols}
+
+\hspace{-6.21mm} About frameworks/libraries, i've professionally worked (and currently working) with \emph{Spring}, \emph{Hibernate}, \emph{Apache CFX}, \emph{JavaCC}/\emph{JJTree}, \emph{jUnit}, \gls{gwt}, \gls{gxt} and a few others\footnote{Like \emph{Joda}, \emph{JasperReports}, \emph{log4j}, etc}.\\\\
+Regarding databases, i have experience with Oracle SQL Server and PostgreSQL  (professionally), MySQL and H2 (educationally).
+
+\section*{Miscellaneous}
+Other than the experience and skills listed above, i actively update my knowledge base in both technology and security fields, being the later my main focus (crypto, penetration testing, information assurance, risk management).\\
+I have experience with various:
+\begin{enum}
+	\item code and text editors:
+	\begin{multicols}{3}
+	\begin{listing}
+		\item \emph{Eclipse}
+		\item \emph{Intellij IDEA}
+		\item \emph{Android Studio}
+		\item \emph{Visual Studio}
+		\item \emph{Sublime Text (2/3)}
+	\end{listing} 
+	\end{multicols}
+	\item version control repositories:
+	\begin{multicols}{3}
+	\begin{listing}
+		\item CVS
+		\item SVN
+		\item Git
+	\end{listing}
+	\end{multicols}
+	\item operating systems:
+	\begin{listing}
+		\item Linux - \emph{debian}
+		\item Mac OS X - \emph{Lion}, \emph{Mountain Lion}, \emph{Mavericks}
+		\item Microsoft Windows - \emph{XP}, \emph{7}
+	\end{listing}
+\end{enum}
+
+\section*{Languages}
+\begin{tabular}{L!{\VRule}R}
+Portuguese&Native\\
+English&Fluent\\
+\end{tabular}
+% -------- %
+%  FOOTER  %
+% -------- %
+{\vspace{20pt}\newline\newline
+\vspace{20pt}
+\scriptsize\hfill References and aditional information are available upon request.}
+
+\end{document}
