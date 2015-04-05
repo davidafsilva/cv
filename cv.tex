@@ -11,13 +11,13 @@
 
 \ifpdf
 \pdfinfo {
-	/Author (David Silva)
-	/Title (David Silva's Curriculum Vitae)
-	/Subject (Curriculum Vitae)
-	/Keywords (David Silva CV)
-	/CreationDate (\date)
+    /Author (David Silva)
+    /Title (David Silva's Curriculum Vitae)
+    /Subject (Curriculum Vitae)
+    /Keywords (David Silva CV)
+    /CreationDate (\date)
 }
-\fi 
+\fi
 
 \definecolor{lightgray}{gray}{0.8}
 \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
@@ -35,7 +35,7 @@
   \setlength{\itemsep}{1pt}
   \setlength{\parskip}{0pt}
   \setlength{\parsep}{0pt}
-}{\end{itemize}} 
+}{\end{itemize}}
 \newenvironment{enum}{
  \begin{enumerate}
   \setlength{\itemsep}{1pt}
@@ -44,15 +44,9 @@
 }{\end{enumerate}}
 
 % ------------ %
-%   GLOSSARY   %
-% ------------ %
-\newglossaryentry{crm}{
- name=ClinidataCRM,
- description={\url{http://www.maxdata.pt/index.php?option=com_k2&view=item&layout=item&id=27&Itemid=99&lang=en}}
-}
-% ------------ %
 %   ACRONYMS   %
 % ------------ %
+\newacronym{sdn}{SDN}{\emph{Software Defined Networks}}
 \newacronym{gwt}{GWT}{\emph{Google Web Toolkit}}
 \newacronym{gxt}{GXT}{\emph{Ext-GWT}}
 
@@ -62,12 +56,12 @@
 % ------------ %
 \begin{document}
 \pagestyle{fancy}
-	
+
 % ------ %
 % Header %
 % ------ %
 \begin{minipage}[ht]{0.46\textwidth}
-	\vspace{-5mm}\Huge{\textbf{David Silva}}
+    \vspace{-5mm}\Huge{\textbf{David Silva}}
 \end{minipage}
 % -------- %
 % Contacts %
@@ -77,18 +71,17 @@
 
 \hfill \href{mailto:david@davidafsilva.pt}{david@davidafsilva.pt}
 
-\hfill \url{http://davidafsilva.pt}
+\hfill \url{https://davidafsilva.pt}
 \end{minipage}
 
 % ------- %
 %  Quote  %
 % ------- %
 \begin{minipage}[ht]{0.925\textwidth}
-\vspace{-3mm} Odivelas, Lisboa, Portugal \\\\
-\vspace{0 mm} \hfill \footnotesize{
-\textit{"Try not to become a man of success but a man of value."} - Albert Einstein
+\vspace{-3mm} Lisboa, Portugal\\\\
+\vspace{0 mm} \hfill\footnotesize{
+    \textit{"Try not to become a man of success but a man of value."} - Albert Einstein
 }
-\line(1,0){411}
 \vspace{0.5mm}
 \end{minipage}
 
@@ -102,54 +95,58 @@
 % ABOUT ME %
 %%%%%%%%%%%%
 \section*{About}
-	I'm a passionate software developer, which has over time gained more and more of an interest for security. 
+I'm a passionate software developer, which has over time gained more and more of an interest for both software architecture and security.
 I'm both curiosity and challenge driven, as well as a honest and calm type of a person.\\
-Having a high motivation and learning capacity, i can easily adapt and overcome adverse situations. Nevertheless, i certainly enjoy working in a healthy and inovative work invornement.\\\\
-My areas of expertise are the following, by order of revelance/interest:
+Having a high motivation and learning capacity, i can easily adapt and overcome adverse situations. Nevertheless, i certainly enjoy working in a healthy and innovative work environment.\\\\
+My areas of expertise are the following, by order of relevance/interest:
 \begin{listing}
-	\item Software Development/Architecture
-	 	\begin{listing}
-			\item Back-end business logic
-			\item MVP web front-end
-		\end{listing}
-	\item Software Security
-	\item Fault-Tolerante Distributed Systems
+    \item Software Development
+    \item Software Architecture
+    \item Software Security
 \end{listing}
 
 \section*{Professional Experience}
 \begin{tabular}{L!{\VRule}R}
-	Jan 2013 \\ $\rightarrow$ present &{\bf Software Engineer, Nokia Siemens Networks / Coriant, Portugal}\\
-		&
-		I'm Currently developing software for the Optical Networks area, focused on Routing and Wavelength Assignment (\emph{RWA}) algorithms.\newline
-		\\
-		Technologies 
-		& 
-		The front-end (client layer) is being developed with \emph{Eclipse RCP} and \emph{SWT} (Desktop), \gls{gwt} (Web).\newline
-		The back-end (business/data layer) is being developed with \emph{Java}, \emph{Ecore/EMF}, \emph{jBoss}, \emph{OSGI}, etc\\\\
+    % -------- %
+    % Coriant  %
+    % -------- %
+    Apr 2013 \\ $\rightarrow$ present &{\bf Software Engineer, Coriant, Portugal}\\
+        &
+        I'm Currently developing and architecting software modules that provide a set of key services for an \gls{sdn} platform.\\
+        Technologies\\
+        &
+        \emph{Java}, \emph{CDI}, \emph{JPA}, \emph{Maven}\\
 
-	Jul 2012 \\ $\rightarrow$ Dec 2012 &{\bf Researcher \& Developer, Maxdata Informática, Portugal}\\
-	&
-	Developed a major and innovative IT solution to cover the entire health institution. Packing funcionality, security and rich visual components.\\
+    % -------- %
+    %   NSN    %
+    % -------- %
+    Jan 2013 \\ $\rightarrow$ Apr 2013 &{\bf Software Engineer, Nokia Siemens Networks, Portugal}\\
+        &
+        Developed software for the Optical Networks area, focused on Routing and Wavelength Assignment (\emph{RWA}) algorithms.\\
+        Technologies\\
+        &
+        \emph{Java}, \emph{Ecore/EMF}, \emph{jBoss}, \emph{OSGI}\\
 
-	Technologies 
-	& 
-	The front-end (client layer) was developed with \gls{gwt}.\newline
-	The back-end (business/data layer) features \emph{Java}, \emph{Spring}, \emph{Hibernate}, \emph{Apache CFX}, \emph{JavaCC - JJTree} and many others.\newline
-	We also used \emph{Mirth Connect} for several purposes, such as system/applications integration, quality control, etc.
-\end{tabular}
+    % -------- %
+    % Maxdata  %
+    % -------- %
+    Jul 2012 \\ $\rightarrow$ Dec 2012 &{\bf Software Developer, Maxdata Informática, Portugal}\\
+    &
+    Developed a major and innovative IT solution to cover the entire health institution. Packing functionality, security and rich visual components.\\
+    Technologies \\
+    &
+    \gls{gwt} (front-end), \emph{Java}, \emph{Spring}, \emph{JPA}, \emph{JavaCC / JJTree}.\\
 
-\section*{}
-\begin{tabular}{L!{\VRule}R}
-	Sep 2011\\$\rightarrow$ Jun 2012 &{\bf Trainee, Maxdata Informática, Portugal}\\
-	&
-	Developed an IT solution for Epidemiologic Surveillance, which will be a key factor in both prevention and infection control. This topic was also the target of my 	MSc thesis.\newline
-	Also, i've done a security audit targeting the software \gls{crm}.\\
-	
-	Technologies 
-	& 
-	The front-end (client layer) was developed with \gls{gwt}.\newline
-	The back-end (business/data layer) featured \emph{Java}, \emph{Spring}, \emph{Hibernate}, \emph{Apache CFX}.\newline
-	I also used \emph{Mirth Connect} to implement a middleware between the application and third-party applications.
+    % -------- %
+    % Maxdata  %
+    % -------- %
+    Sep 2011\\$\rightarrow$ Jun 2012 &{\bf Trainee, Maxdata Informática, Portugal}\\
+    &
+    Developed an IT solution for Epidemiological Surveillance, which will be a key factor in both prevention and infection control. This topic was also the target of my MSc thesis.\newline
+    Also, i've done a security audit targeting a in-house developed CRM software.\\
+    Technologies
+    &
+    \gls{gwt} (front-end), \emph{Java}, \emph{Spring}, \emph{JPA}, \emph{JavaCC / JJTree}.
 \end{tabular}
 
 \section*{Education}
@@ -160,125 +157,25 @@ My areas of expertise are the following, by order of revelance/interest:
 
 \subsubsection*{Free Courses}
 \begin{tabular}{L!{\VRule}R}
+Sep/2014 $\rightarrow$ Dez/2014 & Programming Cloud Services for Android Handheld Systems, University of Maryland.\vspace{5pt}\\
+Mar/2014 $\rightarrow$ Jun/2014 & Programming Mobile Applications for Android Handheld Systems, University of Vanderbilt.\vspace{5pt}\\
 Dec/2013 $\rightarrow$ Feb/2014 & Creative, Serious and Playful Science of Android Apps, University of Illinois at Urbana-Champaign.\vspace{5pt}\\
 Jun/2013 $\rightarrow$ Aug/2013 & Malicious Software and its Underground Economy: Two Sides to Every Story, University of London.\vspace{5pt}\\
 Apr/2013 $\rightarrow$ Jul/2013 & Introduction to Data Science, University of Washington.\vspace{5pt}\\
 Mar/2013 $\rightarrow$ Jun/2013 & An Introduction to Interactive Programming in Python, Rice University.\vspace{5pt}\\
-Jan/2013 $\rightarrow$ Mar/2013 & Crytography I, Stanford University.\vspace{5pt}\\
+Jan/2013 $\rightarrow$ Mar/2013 & Cryptography I, Stanford University.\vspace{5pt}\\
 Jan/2013 $\rightarrow$ Mar/2013 & Building an Information Risk Management Toolkit, University of Washington.\vspace{5pt}\\
 Jan/2013 $\rightarrow$ Mar/2013 & Information Security and Risk Management in Context, University of Washington.\vspace{5pt}\\
 \end{tabular}
 
 \section*{Personal projects}
-\begin{tabular}{L!{\VRule}R}
-{\bf adblock}
-	&
-	Adblock is a command-line tool to interact with MVPS hosts file. Enabling an easy way to update your hosts file and keep your machine/pc a ittle bit safer/away from ad-driven networks.\\
-	P. Languages
-	&
-	\emph{Python}\\
-	URL
-	&
-	\url{https://github.com/davidafsilva/adblock}\\\\
-{\bf jVirusTotal}
-	&
-	A simple, yet powerful java API, as well as a tool to scan files/folders live via the VirusTotal.com service.\newline
-	{\bf *Currently under development*}\\
-	P. Languages
-	&
-	\emph{Java}\\
-	Frameworks
-	&
-	\emph{jUnit}, \emph{commons-validator}.\\
-	URL
-	&
-	\url{https://github.com/davidafsilva/jVirusTotal} - currently unavailable\\\\
-{\bf Pipocas.tv Tool}
-	&
-	This project allows to search and automatically download subtitles from the pipocas.tv subtitle web site.\\
-	P. Languages
-	&
-	\emph{Python}\\
-	Libraries
-	&
-	\emph{BeautifulSoup}.\\
-	URL
-	&
-	\url{https://github.com/davidafsilva/pipocas.tv-scraper}\\\\
-{\bf Ticket-Restaurant Tool}
-	&
-	This project aims to provide a simple CLI tool to view the balance and last movements of a Ticket Restaurant Account.\\
-	P. Languages
-	&
-	\emph{Python}\\
-	Libraries
-	&
-	\emph{BeautifulSoup}.\\
-	URL
-	&
-	\url{https://github.com/davidafsilva/ticket-restaurant-tool}\\\\
-{\bf Business Manager}
-	&
-	Business Manager is a tailor-made tool for easily managing clients, products and sales. It features a sale history, custom sale report generation as well as a automatic report sender (via e-mail).\\
-	P. Languages
-	&
-	\emph{Java}\\
-	Frameworks
-	&
-	\emph{Swing}, \emph{H2}, \emph{Spring}, \emph{IcePDF}, \emph{iText}, \emph{jGoodies-forms}, \emph{microba}, \emph{log4j}.\\
-	URL
-	&
-	\url{https://github.com/davidafsilva/business-manager}\\\\
-\end{tabular}
+Please visit my github (\url{https://github.com/davidafsilva}) page. There you'll be able to snoop around most of my pet projects.\\
+The main technologies you'll find are \emph{Java} and \emph{python}.
 
 \section*{Technologies}
-My main programming language is \emph{Java}, i've been programming in \emph{Java} since college (2005). Other than that, i can sort my knowledge of different languages as follows:
-\begin{multicols}{3}
-\begin{enum}
-	\item PHP: Great
-	\item JavaScript: Great
-	\item HTML: Great
-	\item C: Good
-	\item C\#: Good
-	\item Python: Good
-	\item SQL: Good
-	\item Shell scripting: Good
-	\item Haskell: Basic
-\end{enum}
-\end{multicols}
-
-\hspace{-6.21mm} About frameworks/libraries, i've professionally worked (and currently working) with \emph{Spring}, \emph{Hibernate}, \emph{Apache CFX}, \emph{JavaCC}/\emph{JJTree}, \emph{jUnit}, \gls{gwt}, \gls{gxt} and a few others\footnote{Like \emph{Joda}, \emph{JasperReports}, \emph{log4j}, etc}.\\\\
-Regarding databases, i have experience with Oracle SQL Server and PostgreSQL  (professionally), MySQL and H2 (educationally).
-
-\section*{Miscellaneous}
-Other than the experience and skills listed above, i actively update my knowledge base in both technology and security fields, being the later my main focus (crypto, penetration testing, information assurance, risk management).\\
-I have experience with various:
-\begin{enum}
-	\item code and text editors:
-	\begin{multicols}{3}
-	\begin{listing}
-		\item \emph{Eclipse}
-		\item \emph{Intellij IDEA}
-		\item \emph{Android Studio}
-		\item \emph{Visual Studio}
-		\item \emph{Sublime Text (2/3)}
-	\end{listing} 
-	\end{multicols}
-	\item version control repositories:
-	\begin{multicols}{3}
-	\begin{listing}
-		\item CVS
-		\item SVN
-		\item Git
-	\end{listing}
-	\end{multicols}
-	\item operating systems:
-	\begin{listing}
-		\item Linux - \emph{debian}
-		\item Mac OS X - \emph{Lion}, \emph{Mountain Lion}, \emph{Mavericks}
-		\item Microsoft Windows - \emph{XP}, \emph{7}
-	\end{listing}
-\end{enum}
+My main programming language is \emph{Java}, i've been programming in \emph{Java} since college (2005). Other than that, i can code in \emph{C}, \emph{Python}, \emph{Shell scripting}, \emph{JavaScript}, \emph{HTML}, \emph{PHP}.\\
+I have experience with Oracle SQL Server, PostgreSQL, MySQL and H2.\\
+I have experience with \emph{CVS}, \emph{SVN} and \emph{Git} as version control systems.
 
 \section*{Languages}
 \begin{tabular}{L!{\VRule}R}
@@ -290,6 +187,6 @@ English&Fluent\\
 % -------- %
 {\vspace{20pt}\newline\newline
 \vspace{20pt}
-\scriptsize\hfill References and aditional information are available upon request.}
+\scriptsize\hfill References and additional information are available upon request.}
 
 \end{document}
