@@ -1,5 +1,4 @@
 .DS_Store
-cv.log
-.cv.*
-cv.pdf
-cv*.aux
+.cv*
+*.log
+*.aux
