@@ -1,4 +1,4 @@
-.DS_Store
-.cv*
-*.log
-*.aux
+* 
+!cv.text
+!cv.pdf
+!.gitignore

@@ -1,12 +1,10 @@
 \documentclass[10pt]{article}
-\usepackage{array, xcolor, lipsum, bibentry, hyperref}
+\usepackage{array, xcolor, hyperref}
 \usepackage[margin=3cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
-\usepackage[xindy]{glossaries}
 \usepackage{ifpdf}
-\usepackage{multicol}
-
+\usepackage{fontawesome}
 \let\endtitlepage\relax
 
 \ifpdf
@@ -20,9 +18,12 @@
 \fi 
 
 \definecolor{lightgray}{gray}{0.8}
+\definecolor{navy}{RGB}{0, 64, 128}
 \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
 \newcolumntype{R}{p{0.8\textwidth}}
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+\addtolength{\topmargin}{-10mm}
+\addtolength{\textheight}{20mm}
 
 \title{David Silva's Curriculum Vitae}
 \author{David Silva}
@@ -32,236 +33,305 @@
 % ----------------- %
 \newenvironment{listing}{
  \begin{itemize}
-  \setlength{\itemsep}{1pt}
+  \setlength{\itemsep}{0,5pt}
   \setlength{\parskip}{0pt}
   \setlength{\parsep}{0pt}
 }{\end{itemize}} 
 \newenvironment{enum}{
  \begin{enumerate}
-  \setlength{\itemsep}{1pt}
+  \setlength{\itemsep}{0,5pt}
   \setlength{\parskip}{0pt}
   \setlength{\parsep}{0pt}
 }{\end{enumerate}}
 
 % ------------ %
-%   ACRONYMS   %
-% ------------ %
-\newacronym{sdn}{SDN}{\emph{Software Defined Networks}}
-\newacronym{gwt}{GWT}{\emph{Google Web Toolkit}}
-\newacronym{gxt}{GXT}{\emph{Ext-GWT}}
-\newacronym{mooc}{MOOC}{\emph{Massive Open Online Course}}
-\newacronym{oss}{OSS}{\emph{Open Source Software}}
-
-% ------------ %
 % BEGIN THE CV %
 % ------------ %
 \begin{document}
-\pagestyle{fancy}
-	
 % ------ %
 % Header %
 % ------ %
-\begin{minipage}[ht]{0.46\textwidth}
-	\vspace{-5mm}\Huge{\textbf{David Silva}}
+\begin{minipage}[ht]{0.65\textwidth}
+    \vspace{-10mm} \Huge{\textbf{David Silva}}
 \end{minipage}
 % -------- %
 % Contacts %
 % -------- %
-\begin{minipage}[ht]{0.46\textwidth}
-\hfill \href{mailto:david@davidafsilva.pt}{david@davidafsilva.pt}
+\begin{minipage}[ht]{0.30\textwidth}
+    \vspace{-5mm}
+    \textcolor{gray}{\faicon{envelope}}
+    \href{mailto:david@davidafsilva.pt}{david@davidafsilva.pt}
 
-\hfill \url{http://davidafsilva.pt}
+    \textcolor{gray}{\faicon{globe}}
+    \href{http://davidafsilva.pt}{davidafsilva.pt}
 
-\hfill \url{https://linkedin.com/in/davidafsilva}
+    \textcolor{gray}{\faicon{github}}
+    \href{https://github.com/davidafsilva}{davidafsilva}
+
+    \textcolor{gray}{\faicon{linkedin}}
+    \href{https://linkedin.com/in/davidafsilva}{davidafsilva}
 \end{minipage}
 
-% ------- %
-%  Quote  %
-% ------- %
-\begin{minipage}[ht]{0.925\textwidth}
-\vspace{-3mm} Lisboa, Portugal\\\\
-\vspace{0 mm} \hfill\footnotesize{
-    \textit{"Try not to become a man of success, but rather try to become a man of value."} - Albert Einstein
-}
-\vspace{0.5mm}
+% ---------- %
+%  Location  %
+% ---------- %
+\vspace{-4mm}
+\begin{minipage}[ht]{0.9\textwidth}
+    \textcolor{gray}{Lisbon, Portugal}
 \end{minipage}
 
 % -------- %
 % /header  %
 % -------- %
-\line(1,0){411}
+\textcolor{gray}{\line(1,0){405}}
 
 % -------- %
 % ABOUT ME %
 % -------- %
-\section*{About}
-I'm a passionate software engineer, which has over time gained more and more of an interest for both software architecture and security. I'm both curiosity and challenge driven, as well as a honest and calm type of a person.\\\\
-Having a high motivation and learning capacity I aim to continuously improve myself, both personally and professionally. \\
-With a can-do attitude, I can easily adapt and overcome adverse situations, having performed during stress situations as employee of different companies.
-Nevertheless, working in a healthy and innovative work environment is certainly desirable.\\\\
-My areas of expertise are the following:
-\begin{listing}
-	\item Software Development
-	\item Software Architecture
-	\item Software Security
-\end{listing}
+\vspace{-5mm}
+\section*{\textcolor{navy}{\large{About}}}
+\vspace{-3mm}
+\small{
+    I'm a passionate software engineer which has over time gained more of an
+    interest for both software architecture and security. I'm both curiosity and
+    challenge driven as well as a honest and calm type of a person.
+    Having a can-do attitude, high motivation and learning capacity I aim to
+    continuously improve myself both personally and professionally.
+}
 
 % ---------- %
 % EXPERIENCE %
 % ---------- %
-\section*{Professional Experience}
-
+\vspace{-3mm}
+\section*{\textcolor{navy}{\large{Professional Experience}}}
+\vspace{-2mm}
 \begin{tabular}{L!{\VRule}R}
-    % -------- %
-    % Coriant  %
-    % -------- %
-    Jun 2015 \\ $\rightarrow$ present &{\bf Product Security Lead, Coriant, Inc., Portugal}\\
-	&
-	As a Product Security Lead I'm in charge of:
-    \begin{listing}
-        \item Product security related processes development (most of them from scratch), such as vulnerability and \gls{oss} management
-        \item Defining product security requirements
-        \item Determine impact and approve product features 
-        \item Elaborate architectural and security specifications/documents
-        \item Oversee product development activities
-        \item Promote both security awareness and secure standards
-        \item Provide technical support to clients as well as internal staff/colleagues
-    \end{listing}
-    Additionally, I have successfully mentored a MSc student throughout his thesis on "Preventing DoS attacks in multi-domain optical SDN".\\
+    % --- %
+    % Sky %
+    % --- %
+    \footnotesize{Fev 18 - Present}
+     &
+    {\bf Senior Software Engineer, Sky}
+    \footnotesize{- Lisbon, Portugal}
     \\
-    Tech \& Tools\\
-	& 
-    \emph{Python}, \emph{Java}, \emph{Vert.x}, \emph{JavaScript}, \emph{React}, \emph{JSON}, \emph{Docker}, \emph{REST}, \emph{git}, \emph{Nessus}, \emph{Word}, \emph{Excel}, \emph{Jira}, \emph{Confluence}\\    
-    Apr 2013 \\ $\rightarrow$ present &{\bf Lead Software Engineer, Coriant, Inc., Portugal}\\
-	&
-	As a Lead Software Engineer I'm responsible for:
-    \begin{listing}
-        \item Development, design and overall product/software architecture.
-        \item Review and implementation of unit, integration/e2e tests
-    \end{listing}
+     &
+    \vspace{-4mm}
+    {\small
+        \begin{listing}
+            \item Responsible for the architecture and development of multiple
+            low latency APIs
+            \item Lead developer on multiple in-house developed libraries,
+            frameworks and platforms
+            \item Actively engaged with architects and product to align feature
+            definitions and its roadmap
+        \end{listing}
+    }
     \\
-\end{tabular}
-
-\begin{tabular}{L!{\VRule}R}
-    &
-    \begin{listing}
-        \item Provide support for system architects during product features and requirements definitions
-        \item Cooperation between different teams and products
-    \end{listing}
+    \vspace{-6mm}
+    \footnotesize{Tech \& Tools}
+     &
+    \vspace{-6mm}
+    {\footnotesize
+        \emph{Kotlin}, \emph{Java},
+        \emph{Vert.x}, \emph{Spring Boot},
+        \emph{Docker}, \emph{Kubernetes},
+        \emph{Kafka},
+        \emph{Prometheus}, \emph{Grafana}
+    }
     \\
-    Technologies\\
-	& 
-    \emph{Java SE8}, \emph{Spring Boot}, \emph{Apache Kafka}, \emph{Apache Zookeeper}, \emph{jUnit}, \emph{Maven}, \emph{git}\\\\
-
-    % -------- %
-    %   NSN    %
-    % -------- %	
-	Jan 2013 \\ $\rightarrow$ Apr 2013 &{\bf Software Engineer, Nokia Siemens Networks, Portugal}\\
-	&
-	Developed software for the Optical Networks area, focused on Routing and Wavelength Assignment (\emph{RWA}) algorithms.\\
-	Technologies\\
-	& 
-	\emph{Java SE7}, \emph{EMF}, \emph{Ecore}, \emph{jUnit}, \emph{jBoss}, \emph{OSGI}, \emph{SVN}\\
-
+    % ------------------------ %
+    % NSN / Coriant / Infinera %
+    % ------------------------ %
+    \vspace{-4mm}
+    \footnotesize{Jun 15 - Jan 18}
+     &
+    \vspace{-4mm}
+    {\bf Product Security Lead, Infinera}
+    \footnotesize{- Lisbon, Portugal}
+    \\
+     &
+    \vspace{-4mm}
+    {\small
+        \begin{listing}
+            \item Responsible for the product security processes, such as
+            vulnerability and OSS management
+            \item Responsible for define product security requirements and
+            conduct impact analysis on incoming features
+            \item Provided technical support to product clients as well as
+            internal staff
+            \item Mentored an MSc student thesis on
+            \emph{Preventing DoS attacks in multi-domain optical SDN}
+        \end{listing}
+    }
+    \\
+    \vspace{-5mm}
+    \footnotesize{Jan 13 - Jan 18}
+    \\
+     &
+    \vspace{-5mm}
+    {\bf Lead Software Engineer, Infinera}
+    \footnotesize{- Lisbon, Portugal}
+    \\
+     &
+    \vspace{-7mm}
+    {\small
+        \begin{listing}
+            \item Responsible for the development and architecture of core
+            components of an \emph{SDN} platform
+            \item Provided support and guidance for system architects during
+            features and requirements definition
+        \end{listing}
+    }
+    \\
+    \vspace{-6mm}
+    \footnotesize{Tech \& Tools}
+     &
+    \vspace{-6mm}
+    {\footnotesize
+        \emph{Java},
+        \emph{Spring Boot},
+        \emph{Kafka}, \emph{ZooKeeper}
+    }
+    \\
     % -------- %
     % Maxdata  %
-    % -------- %	
-	Jul 2012 \\ $\rightarrow$ Dec 2012 &{\bf Full Stack Software Developer, Maxdata Informática, Portugal}\\
-	&
-	Developed a major and innovative IT solution for health institutions. Focusing on core business work-flows and usability.\\
-	Technologies \\
-	& 
-	\gls{gwt}, \emph{Java SE6}, \emph{Spring}, \emph{Hibernate}, \emph{JavaCC}, \emph{JJTree}.\\
-
     % -------- %
-    % Maxdata  %
-    % -------- %	
-	Sep 2011\\$\rightarrow$ Jun 2012 &{\bf Trainee, Maxdata Informática, Portugal}\\
-	&
-	Developed an Epidemiological Surveillance IT solution, providing a dynamic and elastic software for both prevention and infection control. This topic was also the target of my MSc thesis.\newline
-	Additionally, I've done a security audit targeting a in-house developed CRM software.\\
-	Technologies 
-	& 
-	\gls{gwt}, \emph{Java SE6}, \emph{Spring}, \emph{Hibernate}, \emph{JavaCC}, \emph{JJTree}.
-	\\
+    \vspace{-4mm}
+    \footnotesize{Sep 11 - Dec 12}
+    \\
+     &
+    \vspace{-4mm}
+    {\bf Full Stack Software Developer, Maxdata Informática}
+    \footnotesize{- Lisbon, Portugal}
+    \\
+     &
+    \vspace{-7mm}
+    {\small
+        \begin{listing}
+            \item Developed an Epidemiological Surveillance IT solution
+            (focus of MSc thesis)
+            \item Actively contributed to the Clinical platform development
+            \item Performed a security audition targeting an in-house developed
+            CRM
+        \end{listing}
+    }
+    \\
+    \vspace{-6mm}
+    \footnotesize{Tech \& Tools}
+     &
+    \vspace{-6mm}
+    {\footnotesize
+        \emph{Java},
+        \emph{Spring}, \emph{Hibernate}, \emph{JavaCC}, \emph{JJTree},
+        \emph{GWT},
+        \emph{Oracle}, \emph{PostgreSQL}
+    }
+    \\
 \end{tabular}
 
 % -------------- %
 % CERTIFICATIONS %
 % -------------- %
-
-\section*{Professional Certifications}
+\vspace{-4mm}
+\section*{\textcolor{navy}{\large{Professional Certifications}}}
+\vspace{-2mm}
 \begin{tabular}{L!{\VRule}R}
-Dec/2016 & Oracle Certified Associate, Java SE 8 Programmer (1Z0-808)
+    \footnotesize{Dec 16}
+     &
+    \small{Oracle Certified Associate, Java SE 8 Programmer}
+    (\footnotesize{1Z0-808})
 \end{tabular}
-
 
 % --------- %
 % EDUCATION %
 % --------- %
-\section*{Education}
+\vspace{-4mm}
+\section*{\textcolor{navy}{\large{Education}}}
+\vspace{-1mm}
 \begin{tabular}{L!{\VRule}R}
-2010 $\rightarrow$ 2012 & MSc in Computer Science - Computer Systems, Architecture and Networks, Faculty of Sciences of the University of Lisbon, Portugal.\vspace{5pt}\\
-2005 $\rightarrow$ 2010 & BSc in Computer Science, Faculty of Sciences of the University of Lisbon, Portugal.
+    \footnotesize{Sep 10 - Sep 12}
+     &
+    \small{MSc in Computer Science - Computer Systems, Architecture and Networks}
+
+    \footnotesize{Faculty of Sciences of the University of Lisbon, Portugal}
+    \\
+    \footnotesize{Sep 05 - Jul 10}
+     &
+    \small{BSc in Computer Science}
+
+    \footnotesize{Faculty of Sciences of the University of Lisbon, Portugal}
 \end{tabular}
-
-\subsubsection*{Free Courses (\gls{mooc}s)}
-\begin{tabular}{L!{\VRule}R}
-Sep/2016 $\rightarrow$ Oct/2016 & Functional Program Design in Scala, École Polytecfacehnique Fédérale de Lausanne.\vspace{5pt}\\
-Jun/2016 $\rightarrow$ Jul/2016 & Functional Programming Principles in Scala, École Polytechnique Fédérale de Lausanne.\vspace{5pt}\\
-Jun/2015 $\rightarrow$ Aug/2015 & Software Security, University of Maryland.\vspace{5pt}\\
-Sep/2014 $\rightarrow$ Dec/2014 & Programming Cloud Services for Android Handheld Systems, University of Maryland.\vspace{5pt}\\
-\end{tabular}
-
-\begin{tabular}{L!{\VRule}R}
-Mar/2014 $\rightarrow$ Jun/2014 & Programming Mobile Applications for Android Handheld Systems, University of Vanderbilt.\vspace{5pt}\\
-Dec/2013 $\rightarrow$ Feb/2014 & Creative, Serious and Playful Science of Android Apps, University of Illinois at Urbana-Champaign.\vspace{5pt}\\
-Jun/2013 $\rightarrow$ Aug/2013 & Malicious Software and its Underground Economy: Two Sides to Every Story, University of London.\vspace{5pt}\\
-Jan/2013 $\rightarrow$ Mar/2013 & Cryptography I, Stanford University.\vspace{5pt}\\
-Jan/2013 $\rightarrow$ Mar/2013 & Building an Information Risk Management Toolkit, University of Washington.\vspace{5pt}\\
-Jan/2013 $\rightarrow$ Mar/2013 & Information Security and Risk Management in Context, University of Washington.\vspace{5pt}\\
-\end{tabular}
-
-
-% -------- %
-% PROJECTS %
-% -------- %
-\section*{Personal projects}
-I have developed several \emph{pet} projects, most of them are publicly available at \url{https://github.com/davidafsilva}.
-The main technologies you'll find are \emph{Java} and \emph{Python} (mostly for scripting). I have also contributed to some open source projects, such as Vert.x and Homebrew.
 
 % ---- %
 % TECH %
 % ---- %
-\section*{Technologies}
-My main programming language is \emph{Java}, specifically the SE flavour. Nevertheless i am also fluent/have had experience with other programming languages such as \emph{C}, \emph{Python}, \emph{JavaScript}.\\\\
-Regarding other stacks/languages/technologies, i have experience, either professional or through pet projects with:\\\\
-\begin{tabular}{L!{\VRule}R}
-Frameworks & \emph{Spring Boot}, \emph{Vert.x}\\
-Rel. DBs & \emph{Oracle SQL Server}, \emph{MariaDB}, \emph{MySQL}, \emph{H2}\\
-NoSQL DBs & \emph{CouchDB}, \emph{Redis}, \emph{MapDB}\\
-VCS & \emph{CVS}, \emph{SVN}, \emph{Git}\\
-Build Tools & \emph{Ant}, \emph{Maven}, \emph{Gradle}\\
-Deploy Tools & \emph{Docker}\\
-CI & \emph{Jenkins}, \emph{Travis-CI}\\
-Code Quality & \emph{JaCoCo}, \emph{Codecov}, \emph{Coveralls}\\
-Issue Tracker & \emph{GitHub}, \emph{BitBucket}, \emph{Jira}, \emph{Trello}, \emph{Redmine}
-\end{tabular}
-
-% --------- %
-% LANGUAGES %
-% --------- %
-\section*{Languages}
-\begin{tabular}{L!{\VRule}R}
-Portuguese & Native\\
-English & Fluent\\
-\end{tabular}
-
-% -------- %
-%  FOOTER  %
-% -------- %
-{\vspace{20pt}
-\vspace{20pt}
-\scriptsize\hfill References and additional information are available upon request.}
+\vspace{-2mm}
+\section*{\textcolor{navy}{\large{Technologies}}}
+\vspace{-2mm}
+\footnotesize{
+    \begin{tabular}{L!{\VRule}R}
+        Languages
+         &
+        \emph{Java},
+        \emph{Kotlin},
+        \emph{JavaScript},
+        \emph{Shell Script},
+        \emph{Python},
+        \emph{Go}
+        \\
+        Frameworks
+         &
+        \emph{Spring Boot},
+        \emph{Vert.x}
+        \\
+        Rel. DBs
+         &
+        \emph{Oracle SQL Server},
+        \emph{PostgreSQL},
+        \emph{MariaDB},
+        \emph{MySQL},
+        \emph{H2}
+        \\
+        NoSQL DBs
+         &
+        \emph{CouchDB},
+        \emph{Redis}
+        \\
+        VCS
+         &
+        \emph{Git},
+        \emph{SVN}
+        \\
+        Build Tools
+         &
+        \emph{Gradle},
+        \emph{Maven}
+        \\
+        Deploy Tools
+         &
+        \emph{Docker},
+        \emph{Kubernetes},
+        \emph{Terraform}
+        \\
+        CI
+         &
+        \emph{Jenkins},
+        \emph{GitHub Actions},
+        \emph{Travis-CI}
+        \\
+        Code Quality
+         &
+        \emph{JaCoCo},
+        \emph{Codecov},
+        \emph{Coveralls},
+        \emph{Sonar}
+        \\
+        Issue Tracker
+         &
+        \emph{Jira},
+        \emph{GitHub},
+        \emph{BitBucket}
+    \end{tabular}
+}
 
 \end{document}
